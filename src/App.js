@@ -17,8 +17,8 @@ const App = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState();
 
-  const api = "f252146a90794c482631a9aabea1cff9";
-  const openCogeAPI = "91e4a7d50f734122ad4fce4a5dd5ca4a";
+  const api = process.env.REACT_APP_OPEN_WEATHER_API;
+  const openCogeAPI = process.env.REACT_APP_OPEN_COGE_API;
 
   const handleSearch = () => {
     setSearchType(searchType === "address" ? "pincode" : "address");
